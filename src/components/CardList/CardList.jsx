@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Card from "../components/Card/Card";
+import Card from "../Card/Card";
 
 export default function CardList({products}) {
 

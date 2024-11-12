@@ -3,9 +3,11 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Button from "../Button/Button";
 import PropTypes from "prop-types";
 import formatToIDRCurrency from "../../utils/formatToIDRCurrency";
+import { Link } from "react-router-dom";
 
 export default function Card({product}) {
   return (
+    <Link to={`/products/${product.slug}` ?? ''} className="flex flex-col max-w-[370px] flex-wrap p-[16px] bg-[#081116] hover:ring-opacity-40 active:ring-5 active:ring-[#6247eb] hover:ring-4 active:ring-2 active:ring-opacity-90" >
     <div className="flex flex-col max-w-[370px] flex-wrap p-[16px] bg-[#081116]" >
           <img src={product.imageUrl ?? ''} alt={product.name ?? 'No name'} className="block max-h-[300px] mb-4 object-cover" />
             <div className="flex flex-col gap-2">
@@ -33,6 +35,7 @@ export default function Card({product}) {
                 </div>
             </div>
           </div>
+          </Link>
   )
 }
 
